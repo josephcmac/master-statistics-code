@@ -1,3 +1,6 @@
+########################################
+#  R-specific ignores (unchanged)
+########################################
 # History files
 .Rhistory
 .Rapp.history
@@ -47,3 +50,36 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+########################################
+#  NEW — ignore *all* R & Python source
+########################################
+*.R
+*.r
+*.Rmd
+*.rmd
+*.Rnw
+*.py
+*.ipynb
+
+########################################
+#  NEW — ignore compiled / temp Python
+########################################
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+########################################
+#  NEW — ignore R-data artefacts
+########################################
+*.rds
+*.Rds
+*.rdata
+*.Rdata
+
+########################################
+#  NEW — ignore image outputs
+########################################
+*.png
+*.j*

@@ -1,0 +1,72 @@
+
+> # Affichage des résultats pour les femmes
+> results_df %>% 
++   filter(sex == "Femme") %>% 
++   dplyr::select(-sex) %>% 
++   xtable(digits = 2) %>%  .... [TRUNCATED] 
+% latex table generated in R 4.4.1 by xtable 1.8-4 package
+% Mon Oct  7 16:34:56 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+age\_min & age\_max & size & p\_value \\ 
+  \hline
+  0 &   4 & 983 & 0.55 \\ 
+    5 &   9 & 1034 & 0.22 \\ 
+   10 &  14 & 1034 & 0.43 \\ 
+   15 &  19 & 1270 & 0.05 \\ 
+   20 &  24 & 1270 & 0.07 \\ 
+   25 &  29 & 1270 & 0.03 \\ 
+   30 &  34 & 1085 & 0.28 \\ 
+   35 &  39 & 1034 & 0.23 \\ 
+   40 &  44 & 1034 & 0.07 \\ 
+   45 &  49 & 1034 & 0.35 \\ 
+   50 &  54 & 1034 & 0.21 \\ 
+   55 &  59 & 1034 & 0.05 \\ 
+   60 &  64 & 1034 & 0.09 \\ 
+   65 &  69 & 1034 & 0.01 \\ 
+   70 &  74 & 983 & 0.00 \\ 
+   75 &  79 & 1034 & 0.01 \\ 
+   80 &  84 & 1034 & 0.00 \\ 
+   85 &  89 & 1034 & 0.00 \\ 
+   90 &  94 & 1034 & 0.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+> # Affichage des résultats pour les hommes
+> results_df %>% 
++   filter(sex == "Homme") %>% 
++   dplyr::select(-sex) %>% 
++   xtable(digits = 2) %>%  .... [TRUNCATED] 
+% latex table generated in R 4.4.1 by xtable 1.8-4 package
+% Mon Oct  7 16:34:56 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+age\_min & age\_max & size & p\_value \\ 
+  \hline
+  0 &   4 & 1034 & 0.10 \\ 
+    5 &   9 & 1034 & 0.33 \\ 
+   10 &  14 & 1187 & 0.03 \\ 
+   15 &  19 & 1136 & 0.26 \\ 
+   20 &  24 & 1085 & 0.36 \\ 
+   25 &  29 & 1034 & 0.02 \\ 
+   30 &  34 & 1034 & 0.16 \\ 
+   35 &  39 & 1034 & 0.05 \\ 
+   40 &  44 & 1034 & 0.08 \\ 
+   45 &  49 & 1034 & 0.23 \\ 
+   50 &  54 & 1034 & 0.27 \\ 
+   55 &  59 & 983 & 0.14 \\ 
+   60 &  64 & 983 & 0.01 \\ 
+   65 &  69 & 1034 & 0.00 \\ 
+   70 &  74 & 1034 & 0.00 \\ 
+   75 &  79 & 1085 & 0.00 \\ 
+   80 &  84 & 1085 & 0.00 \\ 
+   85 &  89 & 1085 & 0.01 \\ 
+   90 &  94 & 1270 & 0.00 \\ 
+   \hline
+\end{tabular}
+\end{table}

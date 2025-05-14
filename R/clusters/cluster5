@@ -1,0 +1,75 @@
+> # Formatage des résultats
+> results_df <- results_df %>%
++   mutate(age_min = as.integer(age_min), age_max = as.integer(age_max))
+
+> # Affichage des résultats pour les femmes
+> results_df %>% 
++   filter(sex == "Femme") %>% 
++   dplyr::select(-sex) %>% 
++   xtable(digits = 2) %>%  .... [TRUNCATED] 
+% latex table generated in R 4.4.1 by xtable 1.8-4 package
+% Mon Oct  7 21:31:08 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+age\_min & age\_max & size & p\_value \\ 
+  \hline
+  0 &   4 & 983 & 0.77 \\ 
+    5 &   9 & 1034 & 0.99 \\ 
+   10 &  14 & 1034 & 0.83 \\ 
+   15 &  19 & 1270 & 0.99 \\ 
+   20 &  24 & 1270 & 0.34 \\ 
+   25 &  29 & 1270 & 0.93 \\ 
+   30 &  34 & 1085 & 0.86 \\ 
+   35 &  39 & 1034 & 0.96 \\ 
+   40 &  44 & 1034 & 0.94 \\ 
+   45 &  49 & 1034 & 0.97 \\ 
+   50 &  54 & 1034 & 0.89 \\ 
+   55 &  59 & 1034 & 0.96 \\ 
+   60 &  64 & 1034 & 0.98 \\ 
+   65 &  69 & 1034 & 0.62 \\ 
+   70 &  74 & 983 & 0.71 \\ 
+   75 &  79 & 1034 & 0.66 \\ 
+   80 &  84 & 1034 & 0.48 \\ 
+   85 &  89 & 1034 & 0.63 \\ 
+   90 &  94 & 1034 & 0.56 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+> # Affichage des résultats pour les hommes
+> results_df %>% 
++   filter(sex == "Homme") %>% 
++   dplyr::select(-sex) %>% 
++   xtable(digits = 2) %>%  .... [TRUNCATED] 
+% latex table generated in R 4.4.1 by xtable 1.8-4 package
+% Mon Oct  7 21:31:08 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+age\_min & age\_max & size & p\_value \\ 
+  \hline
+  0 &   4 & 1034 & 0.67 \\ 
+    5 &   9 & 1034 & 0.93 \\ 
+   10 &  14 & 1187 & 0.99 \\ 
+   15 &  19 & 1136 & 0.66 \\ 
+   20 &  24 & 1085 & 1.00 \\ 
+   25 &  29 & 1034 & 0.97 \\ 
+   30 &  34 & 1034 & 0.99 \\ 
+   35 &  39 & 1034 & 0.90 \\ 
+   40 &  44 & 1034 & 0.87 \\ 
+   45 &  49 & 1034 & 0.88 \\ 
+   50 &  54 & 1034 & 0.98 \\ 
+   55 &  59 & 983 & 0.90 \\ 
+   60 &  64 & 983 & 1.00 \\ 
+   65 &  69 & 1034 & 0.84 \\ 
+   70 &  74 & 1034 & 0.75 \\ 
+   75 &  79 & 1085 & 0.70 \\ 
+   80 &  84 & 1085 & 0.56 \\ 
+   85 &  89 & 1085 & 0.31 \\ 
+   90 &  94 & 1270 & 0.76 \\ 
+   \hline
+\end{tabular}
+\end{table}
